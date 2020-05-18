@@ -1,6 +1,6 @@
 # Badges
 
-[![CircleCI](https://circleci.com/gh/101101/kb/tree/master.svg?style=svg)](https://circleci.com/gh/101101/kb/tree/master)
+[![CircleCI](https://circleci.com/gh/101101/kb.svg?style=shield)](https://circleci.com/gh/101101/kb)
 
 
 
