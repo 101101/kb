@@ -1,17 +1,13 @@
 - title: Documentation
   url: docs
-
-- title: "Infra"
-  url: "docs/infra/infra-readme"
-
 - title: NOC
   url: noc
-
-- title: "Product-X"
-  url: "docs/product-x/product-x_readme"
-
-- title: "Extras"
-  url: "docs/extras"
+- title: Infra
+  url: docs/infra/infra-readme
+- title: Product-X
+  url: docs/product-x/product-x_readme
+- title: Extras
+  url: docs/extras
   links:
     - title: Quizzes
       url: "docs/extras/example-quiz"
