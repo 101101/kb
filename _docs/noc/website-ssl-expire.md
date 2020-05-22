@@ -23,14 +23,10 @@ description: Process for website-ssl-expire
 
 ---
 
-- [ ] Validate that cert is expiring  
-- [ ] verify with `script`  
+- [ ] Verify certificate expiring via `script`  
   * Expiring?
-    - [ ] **YES** - goto **[unresponsive-service](./unresponsive-service.md)**
-    - [ ] **NO** - Start the service  
-       * Did it start?
-        - [ ] **YES** - Notify Team  
-        - [ ] **NO** - Investigate False Alert  
+    - [ ] **YES** - Notify Team
+    - [ ] **NO** - Investigate False Alert 
 
 
 ---
