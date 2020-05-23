@@ -20,10 +20,34 @@ tags:
  - alert-name
 description: tell me something about this page
 ---
+
 ```
 
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcblx0QVtUaGlzXSAtLT58aXMgYW58IEJcbiAgXG4gIHN1YmdyYXBoIHN1YjEgW2Zvb11cblx0QihleGFtcGxlKSAtLT4gQ3tmbG93Y2hhcnR9XG4gIGVuZFxuXG4gIHN1YmdyYXBoIHN1YjIgW2Jhcl1cbiAgQyAtLT58dGhhdHwgRFt5b3VdXG5cdEMgLS0-fGNhbnwgRVtjaGFuZ2VdXG5cdEMgLS0-fGFuZHwgRlt1c2UuLi5dXG5cdGVuZFx0XHRcbiAgXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkYXJrIn19)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcblx0QVtUaGlzXSAtLT58aXMgYW58IEJcbiAgXG4gIHN1YmdyYXBoIHN1YjEgW2Zvb11cblx0QihleGFtcGxlKSAtLT4gQ3tmbG93Y2hhcnR9XG4gIGVuZFxuXG4gIHN1YmdyYXBoIHN1YjIgW2Jhcl1cbiAgQyAtLT58dGhhdHwgRFt5b3VdXG5cdEMgLS0-fGNhbnwgRVtjaGFuZ2VdXG5cdEMgLS0-fGFuZHwgRlt1c2UuLi5dXG5cdGVuZFx0XHRcbiAgXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkYXJrIn19)  
 
- ---
+---
+
+*Mermaid code*  
+```mermaid
+
+graph LR
+	A[This] -->|is an| B
+  
+ subgraph sub1 [foo]
+	B(example) --> C{flowchart}
+ end
+
+ subgraph sub2 [bar]
+ C -->|that| D[you]
+	C -->|can| E[change]
+	C -->|and| F[use...]
+	end		
+  		
+```
+
+You can edit this [here]()  
+
+---
  
 
 | Contact: |
