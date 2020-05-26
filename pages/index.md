@@ -27,10 +27,10 @@ The Runbooks in `/docs` are searchable, and links are created to these when aler
 When an alert comes in, a tag is used to lookup the associated runbook.  
 
 Here's a sample alert that arrived in Slack:  
-![sample-slack-alert.jpg]({{ site.baseurl }}/assets/img/sample-slack-alert.jpg "slack alert")  
+![{{% site.baseurl %}}]({{ site.baseurl }}/assets/img/sample-slack-alert.jpg "slack alert")  
 
 When you click the **Runbook** link, it performs a search for the associated runbook:  
-![sample-search-result.jpg]({{ site.baseurl }}/assets/img/sample-search-result.jpg "search result")  
+![{{ site.baseurl }}]({{ site.baseurl }}/assets/img/sample-search-result.jpg "search result")  
 
 ---
 
