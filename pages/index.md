@@ -30,7 +30,7 @@ Here's a sample alert that arrived in Slack:
 ![sample-slack-alert.jpg]({{ site.baseurl }}/assets/img/sample-slack-alert.jpg "slack alert")  
 
 When you click the **Runbook** link, it performs a search for the associated runbook:  
-![sample-search-result.jpg]({{ site.baseurl }}/assets/img/sample-slack-alert.jpg "slack alert")  
+![sample-search-result.jpg]({{ site.baseurl }}/assets/img/sample-search-result.jpg "search result")  
 
 ---
 
