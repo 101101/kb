@@ -22,15 +22,17 @@ This was created to integrate with the Prometheus monitoring solution which I ar
 
 The Runbooks in `/docs` are searchable, and links are created to these when alerts fire from Prometheus. There are integrations with Slack and PagerDuty, for quick reference to runbooks during impacts.
 
-## Sample  
+---
+
+## Example  
 
 When an alert comes in, a tag is used to lookup the associated runbook.  
 
 Here's a sample alert that arrived in Slack:  
-![{{% site.baseurl %}}]({{ site.baseurl }}/assets/img/sample-slack-alert.jpg "slack alert")  
+![sample-slack-alert.jpg]({{ site.baseurl }}/assets/img/sample-slack-alert.jpg "slack alert")  
 
 When you click the **Runbook** link, it performs a search for the associated runbook:  
-![{{ site.baseurl }}]({{ site.baseurl }}/assets/img/sample-search-result.jpg "search result")  
+![sample-search-result.jpg]({{ site.baseurl }}/assets/img/sample-search-result.jpg "search result")  
 
 ---
 
