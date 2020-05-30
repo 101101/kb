@@ -1,13 +1,14 @@
 ---
 title: website-ssl-expire
-permalink: /docs/noc/website-ssl-expire/
+permalink: /docs/general/web/website-ssl-expire/
 tags: 
- - noc
+ - website
  - ssl
  - certificate
  - expire
 category:
- - noc
+ - web
+ - general
 description: Process for website-ssl-expire
 ---
 
@@ -19,7 +20,7 @@ description: Process for website-ssl-expire
 ---
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcblxuICBzdWJncmFwaCBzZzAgW1NTTCBFeHBpcmluZ11cbiAgYTEoW0FsZXJ0IFJlY2VpdmVkXSlcbiAgZW5kXG4gIHN1YmdyYXBoIHNnMSBbVmFsaWRhdGVdXG4gIGExIC0uLT4gYTJcbiAgYTJbW1wiZmE6ZmEtY29kZSBWYWxpZGF0ZSBFeHBpcmF0aW9uICZsZTsgMTAgZGF5cyBcIl1dIFxuICBlbmRcblxuICBzdWJncmFwaCBzZzIgW05vdGlmeV1cbiAgYTIgLS4tPiBuM1tbTm90aWZ5IFRlYW1dXVxuICBlbmRcblxuIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcblxuICBzdWJncmFwaCBzZzAgW1NTTCBFeHBpcmluZ11cbiAgYTEoW0FsZXJ0IFJlY2VpdmVkXSlcbiAgZW5kXG4gIHN1YmdyYXBoIHNnMSBbVmFsaWRhdGVdXG4gIGExIC0uLT4gYTJcbiAgYTJbW1wiZmE6ZmEtY29kZSBWYWxpZGF0ZSBFeHBpcmF0aW9uICZsZTsgMTAgZGF5cyBcIl1dIFxuICBlbmRcblxuICBzdWJncmFwaCBzZzIgW05vdGlmeV1cbiAgYTIgLS4tPiBuM1tbTm90aWZ5IFRlYW1dXVxuICBlbmRcblxuIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)  
 
-
+Flowchart can be edited **[here](https://mermaid-js.github.io/mermaid-live-editor)**  
 
 ---
 
@@ -28,27 +29,6 @@ description: Process for website-ssl-expire
     - [ ] **YES** - Notify Team
     - [ ] **NO** - Investigate False Alert 
 
-
----
-
-### The mermaid code:  
-
-```mermaid
-graph LR
-  subgraph sg0 [SSL Expiring]
-  a1([Alert Received])
-  end
-  
-  subgraph sg1 [Validate]
-  a1 -.-> a2
-  a2[["fa:fa-code Validate Expiration &le; 10 days "]] 
-  end
-
-  subgraph sg2 [Notify]
-  a2 -.-> n3[[Notify Team]]
-  end
-```
-Flowchart can be edited **[here](https://mermaid-js.github.io/mermaid-live-editor)**  
 
 ---
 
