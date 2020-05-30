@@ -8,7 +8,6 @@ tags:
  - expire
 category:
  - web
- - general
 description: Process for website-ssl-expire
 ---
 
