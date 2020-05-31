@@ -1,5 +1,5 @@
 ---
-title: website-ssl-expire
+title: website-status-code
 permalink: /docs/general/web/website-status-code/
 tags: 
  - web
