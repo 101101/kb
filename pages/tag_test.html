@@ -1,5 +1,4 @@
 ---
-layout: page
 title: tag_test
 permalink: /tag_test/
 ---
@@ -57,18 +56,8 @@ You've landed on the {{ site.title }} tag_test page... #yay4that
 {%- endfor -%}
 
 ---
-### TEST 1
-<div class="section-index">
-    <hr class="panel-line">
-    {% for post in site.docs %}
-        {% if post.category contains "noc" %}
-            <div class="entry">
-            <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
-            <p>{{ post.description }}</p>
-            </div>
-        {% endif %}
-    {% endfor %}
-</div>
+
+---
 
 ---
 
