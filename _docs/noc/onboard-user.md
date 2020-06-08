@@ -1,7 +1,10 @@
 ---
 title: onboard-user
 permalink: /docs/noc/onboard-user/
-tags: noc user onboard
+tags: 
+ - noc
+ - user
+ - onboard
 category: noc
 description: Process for on-boarding a user to the noc
 ---
