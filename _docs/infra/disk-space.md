@@ -5,6 +5,8 @@ tags:
  - infra
  - disk-space
  - disk
+category:
+ - infra
 description: Troubleshoot and resolve issues with disk-space
 ---
 
