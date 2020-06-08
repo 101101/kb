@@ -5,6 +5,7 @@ tags:
  - infra
  - service-down
  - service
+category: infra
 description: What do do when a service-down alert is received  
 ---
 
