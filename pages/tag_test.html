@@ -36,7 +36,7 @@ You've landed on the {{ site.title }} tag_test page... #yay4that
 
 
 {% for tag in tags_list %}
-  {% if tag.noc %}
+  {% if tag == "noc" %}
     <h3 id="{{ tag | replace: '/', '-' }}" class="linked-section">{{ tag }}</h3>
     <div class="post-list" style="margin-bottom:40px">
     {% for doc in site.docs %}
