@@ -59,6 +59,31 @@ particular page.
     {% endif %}
 {% endfor %}
 
+---
+
+### TEST 8
+
+{% for post in site.docs %}
+    {% if doc.category contains "noc" %}
+        <div class="entry">
+        <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+        <p>{{ post.description }}</p>
+        </div>
+    {% endif %}
+{% endfor %}
+
+---
+
+### TEST 9
+
+{% for post in site.docs %}
+    {% if doc.category == "noc" %}
+        <div class="entry">
+        <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+        <p>{{ post.description }}</p>
+        </div>
+    {% endif %}
+{% endfor %}
 
 ---
 
