@@ -35,20 +35,29 @@ particular page.
 
 ---
 
-### TEST 5
+### TEST 6
 
-<div class="section-index">
-    <hr class="panel-line">
-    {% for doc in site.docs %}
-        {% if doc.category == "noc" %}
-            <div class="entry">
-            <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
-            <p>{{ post.description }}</p>
-            </div>
-        {% endif %}
-    {% endfor %}
-</div>
+{% for doc in site.docs %}
+    {% if doc.category == "noc" %}
+        <div class="entry">
+        <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+        <p>{{ post.description }}</p>
+        </div>
+    {% endif %}
+{% endfor %}
 
+---
+
+### TEST 7
+
+{% for t in site.tags %}
+    {% if t contains 'noc' %}     
+        <div class="entry">
+        <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+        <p>{{ post.description }}</p>
+        </div>
+    {% endif %}
+{% endfor %}
 
 
 ---
