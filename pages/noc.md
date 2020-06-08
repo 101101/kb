@@ -15,28 +15,10 @@ particular page.
 
 ---
 
-### TEST 8
-
 <div class="section-index">
     <hr class="panel-line">
     {% for post in site.docs %}
         {% if post.category contains "noc" %}
-            <div class="entry">
-            <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
-            <p>{{ post.description }}</p>
-            </div>
-        {% endif %}
-    {% endfor %}
-</div>
-
----
-
-### TEST 9
-
-<div class="section-index">
-    <hr class="panel-line">
-    {% for post in site.docs %}
-        {% if post.category == "noc" %}
             <div class="entry">
             <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
             <p>{{ post.description }}</p>
