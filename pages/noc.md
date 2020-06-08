@@ -35,23 +35,19 @@ particular page.
 
 ---
 
-### TEST 4
+### TEST 5
 
-{% for tag in tags_list %}{% if tag %}<h3 id="{{ tag | replace: '/', '-' }}" class="linked-section">{{ tag }}</h3>
-<div class="post-list" style="margin-bottom:40px">
-    {% for post in site.tags[tag] %}<div class="tag-entry">
-    <a href="{{- site.url -}}{{- post.url -}}">{{- post.title -}}</a>
-    <time style="font-style:italic; float:right" datetime="{{- post.date | date_to_xmlschema -}}"> {{- post.date | date: "%B %d, %Y" -}}</time>
-</div>{%- endfor -%}
-{% for doc in site.docs %}{% if doc.tags contains tag[noc] %}
-<div class="tag-entry">
-    <a href="{{- site.baseurl -}}{{- doc.url -}}">{{ doc.title }}</a>
-        <time style="font-style:italic; float:right" datetime="{{- doc.date | date_to_xmlschema -}}"> {{- doc.date | date: "%B %d, %Y" -}}</time>
-    </div>{% endif %}{% endfor %}
-</div>{% endif %}{%- endfor -%}
-
-
-
+<div class="section-index">
+    <hr class="panel-line">
+    {% for doc in site.docs %}
+        {% if doc.category == "noc" %}
+            <div class="entry">
+            <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+            <p>{{ post.description }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
 
 
 
