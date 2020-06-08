@@ -10,7 +10,7 @@ You've landed on the {{ site.title }} tag_test page... #yay4that
 <hr>
 
 {% capture site_tags %}
-  {% for tag in site.tags %}
+  {% for tag in site.tags.noc %}
     {% if tag %}{{ tag | first }}
       {% unless forloop.last %},{% endunless %}
     {% endif %}
@@ -22,7 +22,7 @@ You've landed on the {{ site.title }} tag_test page... #yay4that
 
 
 {% for doc in site.docs %}
-  {% assign ttags = doc.tags | join:',' | append:',' %}
+  {% assign ttags = doc.tags.noc | join:',' | append:',' %}
   {% assign docs_tags = docs_tags | append:ttags %}
 {% endfor %}
 
