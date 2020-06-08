@@ -4,6 +4,7 @@ permalink: /docs/product-x/example/
 tags: 
  - product-x
  - example
+category: product-x
 description: tell me something about this page
 ---
 
