@@ -3,9 +3,9 @@
 - title: NOC
   url: noc
 - title: Infra
-  url: docs/infra/infra-readme
+  url: infra
 - title: Product-X
-  url: docs/product-x/product-x_readme
+  url: product-x
 - title: Extras
   url: docs/extras
   links:
