@@ -4,6 +4,7 @@ permalink: /docs/infra/context-switching/
 tags: 
  - infra
  - context-switching
+ category: infra
 description: Troubleshoot and resolve issues with context-switching
 ---
 
