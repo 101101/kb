@@ -1,6 +1,7 @@
 ---
 title: Unresponsive Service
 permalink: /docs/infra/unresponsive-service/
+category: infra
 tags: 
  - infra
  - service
