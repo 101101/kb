@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Infra
 permalink: /docs/infra/infra-readme/
 tags: 
