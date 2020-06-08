@@ -5,8 +5,7 @@ tags:
  - noc
  - bridge
  - close
-category:
- - noc
+category: noc
 description: Process for closing scheduled bridge
 ---
 
