@@ -5,6 +5,8 @@ tags:
  - product-x
  - readme
  - alert-name
+category:
+ - product-x
 description: tell me something about this page
 ---
 
