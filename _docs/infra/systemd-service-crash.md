@@ -6,6 +6,7 @@ tags:
  - systemd-service-crash
  - service
  - systemd
+category: infra
 description: Troubleshoot & Resolve - systemd-service-crash  
 ---
 
