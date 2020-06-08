@@ -10,7 +10,7 @@ You've landed on the {{ site.title }} tag_test page... #yay4that
 <hr>
 
 {% capture site_tags %}
-  {% for tag['noc'] in site.tags %}
+  {% for tag in site.tags %}
     {% if tag %}{{ tag | first }}
       {% unless forloop.last %},{% endunless %}
     {% endif %}
