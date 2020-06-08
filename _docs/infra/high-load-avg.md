@@ -5,6 +5,8 @@ tags:
  - infra
  - load
  - high-load-avg
+category:
+ - infra
 description: Troubleshoot and resolve issues with high load
 ---
 
