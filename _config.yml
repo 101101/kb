@@ -1,5 +1,3 @@
-# Welcome to Jekyll!
-#
 # Site settings
 # You can create any custom variable you would like, and they will be 
 # in the templates via {{ site.myvariable }}.
@@ -36,8 +34,7 @@ feedback: true
 # google-analytics: UA-XXXXXXXXXX
 
 logo_pixels: 34
-color: "#30638e"
-# color: "0f3b61"
+color: "#0f3b61"
 # color: "#30638e"  # original color
 
 # Build settings
