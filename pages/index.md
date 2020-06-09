@@ -6,16 +6,19 @@ permalink: /
 
 # Welcome to kb
 
-> This is a searchable, flat, document storage frontend, which leverages github for document management.
+> KB is a simple, crisp, responsive, and searchable, document management solution, which leverages github.
 
-| Build Status |
-| :----------: |
-| [![CircleCI](https://circleci.com/gh/101101/kb/tree/master.svg?style=shield)](https://circleci.com/gh/101101/kb/tree/master) |  
+---
 
+### Status  
+
+**Build :** [![CircleCI](https://circleci.com/gh/101101/kb/tree/master.svg?style=shield)](https://circleci.com/gh/101101/kb/tree/master)  
+
+---
 
 ### Purpose
 
-This was created to integrate with the Prometheus monitoring solution which I architected.  
+KB was created to integrate with monitoring solutions like Prometheus, which I architect. They will leverage this product to quickly identify Processes, Runbooks, Instructions, Policies, etc, by passing tags to the integrated communication platforms, and allowing the customer to use hot-links to rapidly lookup, identify, and access documents within KB, to improve efficiency. 
 
 
 ### Features
@@ -33,6 +36,8 @@ Here's a sample alert that arrived in Slack:
 
 When you click the **Runbook** link, it performs a search for the associated runbook and presents the customer with options:  
 ![sample-search-result.jpg]({{ site.baseurl }}/assets/img/sample-search-result.jpg "search result")  
+
+This is easily achieved by correlating the `alert name` to the `runbook name`. *With repository growth, more complex tag passing options are available, and weighted answers could be generated.*  
 
 ---
 
