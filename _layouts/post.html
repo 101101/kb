@@ -6,3 +6,11 @@ layout: page
 {% if page.badges %}{% for badge in page.badges %}<span class="badge badge-{{ badge.type }}">{{ badge.tag }}</span>{% endfor %}{% endif %}
 <span class="post-date" style="font-style: italic;">{{ page.date | date: "%B %d, %Y" }}</span>
 {{ content }}
+
+<hr>
+<span>[
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge">{{ tag_name }}</code>&nbsp;</a>
+  {% endfor %}
+]</span>
