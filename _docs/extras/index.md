@@ -15,4 +15,4 @@ for adding interactive quizzes.
 
 
 Would you like to see another question type, or another kind of extra? Please
-[open an issue])({{ site.repo }}/issues/new).
+[open an issue]({{ site.repo }}/issues/new).
