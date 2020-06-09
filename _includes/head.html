@@ -5,6 +5,12 @@
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
+<!-- TSS badge issue  
+{% if site.tags != "" %}
+  {% include collecttags.html %}
+{% endif %}
+-->  
+  
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/index.xml">
 
 <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicons/favicon.ico" >
@@ -39,8 +45,6 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-{% if site.tags != "" %}
-  {% include collecttags.html %}
-{% endif %}
+
 
 </head>
