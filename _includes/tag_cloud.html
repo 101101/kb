@@ -14,6 +14,6 @@
     {% capture tagname %}
         {{ tagitems[1] }}
     {% endcapture %}
-    <a href="/tag/{{ tagname }}"><code class="highligher-rouge">{{ tagname }}</code></a>
+    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tagname }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tagname }} {% endif %}"><code class="highligher-rouge">{{ tagname }}</code></a>
 {% endfor %}
 
