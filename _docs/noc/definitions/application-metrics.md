@@ -6,7 +6,7 @@ tags:
  - metric
  - application
 category: noc
-description: application-metrics
+description: standard application-metrics to monitor for app health  
 ---
 
 # application-metrics  
