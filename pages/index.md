@@ -21,18 +21,28 @@ KB was created to integrate with monitoring solutions like Prometheus, which I a
 
 ### Features
 
-The Runbooks in `/docs` are searchable, and links are created to these when alerts fire from Prometheus. There are integrations with Slack and PagerDuty, for quick reference to runbooks during impacts.
+The Runbooks in `/docs` are searchable, and links are created to these when alerts fire from Prometheus, to allow quick reference to runbooks during impacts. I have currently setup integrations through -  
+  * Slack  
+  * Discord  
+  * Microsoft Teams  
+  * PagerDuty  
+Just about any solution could be leveraged by formatting the simple json payload from monitoring products.
 
 ---
 
-### Example  
+### Short Example  
 
 When an alert comes in, a tag is used to lookup the associated runbook.  
 
 Here's a sample alert that arrived in Slack:  
-![sample-slack-alert.jpg]({{ site.baseurl }}/assets/img/sample-slack-alert.jpg "slack alert")  
+![sample-slack-alert.jpg]({{ site.baseurl }}/assets/img/sample-slack-alert.jpg "slack alert")   
 
-When you click the **Runbook** link, it performs a search for the associated runbook and presents the customer with options:  
+The user is presented with various bits of information about the issue, and three options for action:  
+  * View the firing alert in the `Prometheus` monitoring platform  
+  * Perform a search for an associated `Runbook` to remediate the issue  
+  * `Mute` the alert by creating a custom Silence for the alert | group  
+
+When the user clicks the **Runbook** link, it performs a search for the associated runbook and presents the customer with options:  
 ![sample-search-result.jpg]({{ site.baseurl }}/assets/img/sample-search-result.jpg "search result")  
 
 This is easily achieved by correlating the `alert name` to the `runbook name`. *With repository growth, more complex tag passing options are available, and weighted answers could be generated.*  
