@@ -45,7 +45,15 @@ The user is presented with various bits of information about the issue, and thre
 When the user clicks the **Runbook** link, it performs a search for the associated runbook and presents the customer with options:  
 ![sample-search-result.jpg]({{ site.baseurl }}/assets/img/sample-search-result.jpg "search result")  
 
-This is easily achieved by correlating the `alert name` to the `runbook name`. *With repository growth, more complex tag passing options are available, and weighted answers could be generated.*  
+This is easily achieved by correlating the `alert name` to the `runbook name`.  
+
+*With repository growth, more complex tag passing options are available, and weighted answers could be generated.*  
+  * *For instance, you can pass multiple `space separated tags` in the query, to focus on:*  
+    * *Product*  
+    * *Architecture*  
+    * *Business unit*  
+    * *Tech Team*
+    * *etc...*  
 
 ---
 
