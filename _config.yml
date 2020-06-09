@@ -55,6 +55,7 @@ tag_color: primary # danger, success, warning, primary, info, secondary
 accentColor: red # purple, green, etc.
 themeColor: red # purple, green, blue, orange, purple, grey
 fixedNav: 'true' # true or false
+highlighter: rouge
 
 permalink: /:year/:title/
 markdown: kramdown
