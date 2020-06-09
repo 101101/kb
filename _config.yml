@@ -1,8 +1,4 @@
-# Welcome to Jekyll!
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
@@ -15,10 +11,9 @@ description: > # this means to ignore newlines until "baseurl:"
   access site content based on deployed tags.
 
 # DO NOT CHANGE THE LINE OF THIS FILE without editing .circleci/circle_urls.sh
-baseurl: "/kb" # the subpath of your site, e.g. /blog
+baseurl: "/kb" # the subpath of your site
 
-# This is mostly for testing
-url: "https://101101.github.io" # the base hostname & protocol for your site
+url: "https://101101.github.io" # the base hostname & protocol for the site
 
 # Social (First three Required)
 repo: "https://github.com/101101/kb"
@@ -37,21 +32,15 @@ feedback: true
 # privacy: https://domain.com/privacy
 
 # google-analytics: UA-XXXXXXXXXX
-# Image and (square) dimension for logo (don't start with /)
-# If commented, will use material hat theme
-# logo: "assets/img/logo/SRCC-square-red.png"
+
 logo_pixels: 34
-color: "#30638e"
-# color: "#8c1515" # primary color for header, buttons
+color: "0f3b61"
+# color: "#30638e"  # original color
 
 # Build settings
 markdown: kramdown
 
-# If you add tags to pages, define this variable to link them to some external search
-# If you want to link to tags locally on the site, leave this commented out
-# tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
 tag_color: primary # danger, success, warning, primary, info, secondary
-
 accentColor: red # purple, green, etc.
 themeColor: red # purple, green, blue, orange, purple, grey
 fixedNav: 'true' # true or false
@@ -110,4 +99,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
