@@ -24,15 +24,13 @@ permalink: /tag_test/
 
 {% for tag in tags_list %}
   {% if tag contains "noc" %}
-    <h3 id="{{ tag | replace: '/', '-' }}" class="linked-section">{% highlight ss %}<b>{{ tag | upcase }}</b>{% endhighlight %}</font></h3>
-    <hr>
+    <h3 id="{{ tag | replace: '/', '-' }}" class="linked-section">{% highlight err %}{{ tag | upcase }}{% endhighlight %}</h3>
     <div class="post-list" style="margin-bottom:40px">
     {% for doc in site.docs %}
       {% if doc.tags contains tag %}
         <div class="tag-entry">
           <h5><b><a href="{{- site.baseurl -}}{{- doc.url -}}">{{ doc.title }}</a></b></h5>
-          <p>{{ doc.description }}</p>
-          <time style="font-style:italic; float:right" datetime="{{- doc.date | date_to_xmlschema -}}"> 
+          <p>{{ doc.description }}<time style="font-style:italic; float:right" datetime="{{- doc.date | date_to_xmlschema -}}"></p> 
           {{- doc.date | date: "%B %d, %Y" -}}</time>
           <br>
         </div>
