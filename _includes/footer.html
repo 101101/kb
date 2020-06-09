@@ -10,6 +10,20 @@
     </a>
   </li>
 </ul>{% endif %}
+{% if site.slack %}<ul class="list-inline mb-0">  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Slack" data-original-title="Slack">
+    <a class="text-white" target="_blank" href="{{ site.slack }}">
+      <i class="fab fa-slack"></i>
+    </a>
+  </li>
+</ul>{% endif %}
+{% if site.skype %}<ul class="list-inline mb-0">  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Skype" data-original-title="Skype">
+    <a class="text-white" target="_blank" href="skype:{{ site.skype }}">
+      <i class="fab fa-skype"></i>
+    </a>
+  </li>
+</ul>{% endif %}
 </div>
 <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
 <ul class="list-inline mb-0">  
@@ -19,6 +33,13 @@
     </a>
   </li>
 </ul>
+{% if site.dockerhub %}<ul class="list-inline mb-0">  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Docker" data-original-title="Docker">
+    <a class="text-white" target="_blank" href="{{ site.dockerhub }}">
+      <i class="fab fa-docker"></i>
+    </a>
+  </li>
+</ul>{% endif %}
 </div>
 <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
   <small class="text-white">© 2019 {{ site.author }} All Rights Reserved</small>
