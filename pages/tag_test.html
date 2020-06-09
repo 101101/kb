@@ -24,7 +24,7 @@ permalink: /tag_test/
 
 {% for tag in tags_list %}
   {% if tag contains "noc" %}
-    <h3 id="{{ tag | replace: '/', '-' }}" class="linked-section"><font color="highligher-rouge"><b>{{ tag | upcase }}</b></font></h3>
+    <h3 id="{{ tag | replace: '/', '-' }}" class="linked-section"><font class="highligher-rouge"><b>{{ tag | upcase }}</b></font></h3>
     <hr>
     <div class="post-list" style="margin-bottom:40px">
     {% for doc in site.docs %}
