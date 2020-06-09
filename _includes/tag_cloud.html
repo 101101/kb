@@ -2,15 +2,29 @@
 {% comment %}   https://longqian.me/2017/02/09/github-jekyll-tag/   {% endcomment %}
 
 {% capture site_tags %}
-    {% for tag in site.tags %}
-        {% if tag %}{{ tag | first }}
-            {% unless forloop.last %},{% endunless %}
-        {% endif %}
+  {% for tag in site.tags %}
+    {% if tag %}{{ tag | first }}
+      {% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+
+{% assign docs_tags = "" %}
+
+{% for doc in site.docs %}
+  {% assign ttags = doc.tags | join:',' | append:',' %}
+  {% assign docs_tags = docs_tags | append:ttags %}
+{% endfor %}
+
+{% assign all_tags = site_tags | append:docs_tags %}
+
+{% capture temptags %}
+    {% for tag in all_tags %}
         {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
     {% endfor %}
 {% endcapture %}
 
-{% assign sortedtemptags = site_tags | split:' ' | sort | reverse %}
+{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
 
 {% for temptag in sortedtemptags %}
     {% assign tagitems = temptag | split: '#' %}
@@ -18,6 +32,6 @@
         {{ tagitems[1] }}
     {% endcapture %}
     <a href="/tag/{{ tagname }}"><code class="highligher-rouge">{{ tagname }}</code></a>
-{% endfor %}  
+{% endfor %}
 
 <p>and those were the tags...  </p>
