@@ -7,11 +7,6 @@ excluded_in_search: true
   border: none !important;
 }
 
-.highlight dan {
-  color: #a94064;
-  font-weight: bold;
-}
-
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight .cm {
