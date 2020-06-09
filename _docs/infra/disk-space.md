@@ -10,7 +10,7 @@ category:
 description: Troubleshoot and resolve issues with disk-space
 ---
 
-## disk-space  
+# Disk Space  
 
 _Troubleshoot and resolve issues with disk-space_  
 
