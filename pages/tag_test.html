@@ -35,10 +35,11 @@ You've landed on the {{ site.title }} tag_test page... #yay4that
     {% for doc in site.docs %}
       {% if doc.tags contains tag %}
         <div class="tag-entry">
-          <h5><a href="{{- site.baseurl -}}{{- doc.url -}}">{{ doc.title }}</a></h5>
+          <h5><b><a href="{{- site.baseurl -}}{{- doc.url -}}">{{ doc.title }}</a></b></h5>
           <p>{{ doc.description }}</p>
           <time style="font-style:italic; float:right" datetime="{{- doc.date | date_to_xmlschema -}}"> 
           {{- doc.date | date: "%B %d, %Y" -}}</time>
+          <br>
         </div>
       {% endif %}
     {% endfor %}
