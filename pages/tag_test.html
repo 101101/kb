@@ -30,7 +30,8 @@ permalink: /tag_test/
       {% if doc.tags contains tag %}
         <div class="tag-entry">
           <h5><b><a href="{{- site.baseurl -}}{{- doc.url -}}">{{ doc.title }}</a></b></h5>
-          <p>{{ doc.description }}<time style="font-style:italic; float:right" datetime="{{- doc.date | date_to_xmlschema -}}"></p> 
+          {{ doc.description }}
+          <time style="font-style:italic; float:right" datetime="{{- doc.date | date_to_xmlschema -}}"> 
           {{- doc.date | date: "%B %d, %Y" -}}</time>
           <br>
         </div>
