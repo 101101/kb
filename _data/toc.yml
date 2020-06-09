@@ -13,6 +13,9 @@
       url: "docs/extras/example-quiz"
     - title: Tags Page
       url: "tags"
+      links:
+        - title: "NOC Tags"
+          url: noc_tag_page
 - title: "About"
   url: "about"
 - title: "News"
