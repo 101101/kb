@@ -15,6 +15,10 @@ badges:
    tag: info-badge
  - type: success
    tag: success-badge
+tags:
+ - test
+ - news
+ - info
 ---
 
 This is a sample news post for the site. Above, you can see badge options for this post.
