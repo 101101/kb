@@ -7,7 +7,7 @@ tags:
  - capacity
 category:
  - noc
-description: capacity-metrics
+description: capacity-metrics are to identify when environments should be grown, to handle increasing demand on resources
 ---
 
 # Core Targeted Capacity Metrics  
