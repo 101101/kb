@@ -5,12 +5,16 @@ permalink: /about/
 
 # About
 
-This is based on a Docsy jekyll theme. This version is intended for  
-native deployment on GitHub pages. See the [respository]({{ site.repo }}) for more details.  
+This static-site is based on the Docsy jekyll theme.  
+This version is intended for native deployment on GitHub pages. See the [respository]({{ site.repo }}) for more details.  
 
-| Build Status |
-| :----------: |
-| [![CircleCI](https://circleci.com/gh/101101/kb/tree/master.svg?style=shield)](https://circleci.com/gh/101101/kb/tree/master) |  
+--- 
+
+## Status  
+
+**Build :** [![CircleCI](https://circleci.com/gh/101101/kb/tree/master.svg?style=shield)](https://circleci.com/gh/101101/kb/tree/master)  
+
+---
 
 ## Support
 
