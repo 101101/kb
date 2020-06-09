@@ -1,12 +1,10 @@
 ---
 title: event
 permalink: /docs/noc/definitions/event/
-tags: 
- - noc
- - event
+tags: noc event
 category:
  - noc
-description: event
+description: An event is a condition which exists in the environment
 ---
 
 # event  
