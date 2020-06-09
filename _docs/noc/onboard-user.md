@@ -10,9 +10,9 @@ category:
 description: Process for on-boarding a user to the noc
 ---
 
-## Onboard User
+# Onboard User
 
-> How to onboard a user to the NOC  
+> Steps to onboard a user to the NOC  
 
 ---
 
