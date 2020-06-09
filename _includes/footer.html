@@ -12,7 +12,7 @@
       <div class="col-2 col-sm-1 text-xs-center order-sm-2">
 {% if site.slack %}<ul class="list-inline mb-0">  
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Slack" data-original-title="Slack">
-    <a class="text-white" target="_blank" href="{{ site.slack }}">
+    <a class="text-white" target="_blank" href="https://101101workspace.slack.com/archives/{{ site.slack }}">
       <i class="fab fa-slack"></i>
     </a>
   </li>
@@ -26,6 +26,15 @@
   </li>
 </ul>{% endif %}
 </div>
+      <div class="col-2 col-sm-1 text-xs-center order-sm-2">
+{% if site.discord %}<ul class="list-inline mb-0">  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Discord" data-original-title="Discord">
+    <a class="text-white" target="_blank" href="https://discord.gg/{{ site.discord }}">
+      <i class="fab fa-discord"></i>
+    </a>
+  </li>
+</ul>{% endif %}
+</div>
 <div class="col-2 col-sm-1 text-right text-xs-center order-sm-3">
 <ul class="list-inline mb-0">  
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="GitHub" data-original-title="GitHub">
@@ -34,11 +43,20 @@
     </a>
   </li>
 </ul></div>
-      <div class="col-2 col-sm-1 text-xs-center order-sm-2">
+<div class="col-2 col-sm-1 text-right text-xs-center order-sm-3">
 {% if site.dockerhub %}<ul class="list-inline mb-0">  
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Docker" data-original-title="Docker">
     <a class="text-white" target="_blank" href="{{ site.dockerhub }}">
       <i class="fab fa-docker"></i>
+    </a>
+  </li>
+</ul>{% endif %}
+</div>
+<div class="col-2 col-sm-1 text-right text-xs-center order-sm-3">
+{% if site.gitlab %}<ul class="list-inline mb-0">  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Gitlab" data-original-title="Gitlab">
+    <a class="text-white" target="_blank" href="https://gitlab.com/{{ site.gitlab }}">
+      <i class="fab fa-gitlab"></i>
     </a>
   </li>
 </ul>{% endif %}
