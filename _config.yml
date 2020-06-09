@@ -36,7 +36,8 @@ feedback: true
 # google-analytics: UA-XXXXXXXXXX
 
 logo_pixels: 34
-color: "0f3b61"
+color: "#30638e"
+# color: "0f3b61"
 # color: "#30638e"  # original color
 
 # Build settings
