@@ -10,9 +10,7 @@ permalink: /
 
 ---
 
-### Status  
-
-**Build :** [![CircleCI](https://circleci.com/gh/101101/kb/tree/master.svg?style=shield)](https://circleci.com/gh/101101/kb/tree/master)  
+### Build Status : [![CircleCI](https://circleci.com/gh/101101/kb/tree/master.svg?style=shield)](https://circleci.com/gh/101101/kb/tree/master)  
 
 ---
 
