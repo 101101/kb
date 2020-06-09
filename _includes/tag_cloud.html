@@ -1,14 +1,21 @@
 <h3>Tag Cloud</h3>
 {% comment %}   https://longqian.me/2017/02/09/github-jekyll-tag/   {% endcomment %}
 
-{% capture temptags %}
-  {% for tag in site.tags %}
-    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
-  {% endfor %}
+{% capture site_tags %}
+    {% for tag in site.tags %}
+        {% if tag %}{{ tag | first }}
+            {% unless forloop.last %},{% endunless %}
+        {% endif %}
+        {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+    {% endfor %}
 {% endcapture %}
-{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+
+{% assign sortedtemptags = site_tags | split:' ' | sort | reverse %}
+
 {% for temptag in sortedtemptags %}
-  {% assign tagitems = temptag | split: '#' %}
-  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-  <a href="/tag/{{ tagname }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+    {% assign tagitems = temptag | split: '#' %}
+    {% capture tagname %}
+        {{ tagitems[1] }}
+    {% endcapture %}
+    <a href="/tag/{{ tagname }}"><code class="highligher-rouge">{{ tagname }}</code></a>
 {% endfor %}
