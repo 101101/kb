@@ -40,7 +40,7 @@ color: "#0f3b61"
 # Build settings
 markdown: kramdown
 
-tag_color: primary # danger, success, warning, primary, info, secondary
+tag_color: secondary # danger, success, warning, primary, info, secondary
 
 accentColor: red # purple, green, etc.
 themeColor: red # purple, green, blue, orange, purple, grey
