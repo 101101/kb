@@ -30,7 +30,7 @@ You've landed on the {{ site.title }} tag_test page... #yay4that
 
 {% for tag in tags_list %}
   {% if tag contains "noc" %}
-    <h3 id="{{ tag | replace: '/', '-' }}" class="linked-section"><code class="highligher-rouge">{{ tag }}</code></h3>
+    <h3 id="{{ tag | replace: '/', '-' }}" class="linked-section">{{ tag | upper }</h3>
     <div class="post-list" style="margin-bottom:40px">
     {% for doc in site.docs %}
       {% if doc.tags contains tag %}
