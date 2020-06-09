@@ -7,7 +7,6 @@ tags:
  - onboard
 category: 
  - noc
-date: 20200318
 description: Process for on-boarding a user to the noc
 ---
 
