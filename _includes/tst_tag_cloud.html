@@ -1,37 +1,4 @@
 
-<h6>Tag List</h6>
-
-
-{% assign xxx_tags = "" %}
-{% assign testtags = "" %}
-
-{% for doc in site.docs %}
-  {% assign xxx_tags = doc.tags | join:'|' | append:'|' %}
-  {% assign testtags = testtags | append:xxx_tags %}
-{% endfor %}
-
-
-{% assign testtags = testtags | split:'|' | sort | uniq %}
-
-{% for tag in testtags %}
-  {% if tag != "" %}
-    {% if tags == "" %}
-      {% assign tags = tag | split:'|' %}
-    {% endif %}
-    {% unless tags contains tag %}
-      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
-    {% endunless %}
-  {% endif %}
-{% endfor %}
-
-<span>[
-  {% for tag in testtags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-info">{{ tag_name }}</button></a> &nbsp;
-  {% endfor %}
-]</span>
-
-
 
 <h5>possible tag cloud here</h5>
 
@@ -49,11 +16,9 @@
 
 {% assign sortedtemptags = tctags | split:' ' | sort | reverse %}
 
-{% for temptag in sortedtemptags %}
+{% for tctag in sortedtemptags %}
     {% assign tagitems = tctags | split: '#' %}
-    {% capture tagname %}
-        {{ tagitems[1] }}
-    {% endcapture %}
+    {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
     <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-info">{{ tagname }}</button></a> &nbsp;
 {% endfor %}
 
