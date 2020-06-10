@@ -24,7 +24,7 @@ tags:
 {% endfor %}
 
 
-{% assign testtags = testtags | split:'|' | sort %}
+{% assign testtags = testtags | split:'|' | uniq | sort %}
 
 {% for tag in testtags %}
   {% if tag != "" %}
@@ -50,14 +50,22 @@ tags:
 
 <h5>possible tag cloud here</h5>
 
-{% for tag in testtags %}
+{% assign yyy_tags = "" %}
+{% assign tctags = "" %}
+
+{% for doc in site.docs %}
+  {% assign yyy_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign tctags = tctags | append:yyy_tags %}
+{% endfor %}
+
+{% for tag in tctags %}
     {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
 {% endfor %}
 
-{% assign sortedtemptags = testtags | split:' ' | sort | reverse %}
+{% assign sortedtemptags = tctags | split:' ' | sort | reverse %}
 
 {% for temptag in sortedtemptags %}
-    {% assign tagitems = testtags | split: '#' %}
+    {% assign tagitems = tctags | split: '#' %}
     {% capture tagname %}
         {{ tagitems[1] }}
     {% endcapture %}
@@ -72,9 +80,18 @@ tags:
 
 
 
-<h2>Show Tags from site.tags</h2>
+<h5>Show Tags from doc.tags</h5>
+
+{% assign zzz_tags = "" %}
+{% assign dtags = "" %}
+
+{% for doc in site.docs %}
+  {% assign zzz_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign dtags = dtags | append:zzz_tags %}
+{% endfor %}
+
 <ul>
-  {% assign sorted_tags = testtags | sort %}
+  {% assign sorted_tags = dtags | sort %}
   {% for tag in sorted_tags %}
     {% assign t = tag | first %}
     {% assign posts = tag | last %}
@@ -89,14 +106,27 @@ tags:
 
 
 
+
+
+
 <hr>
+
+
+
 
 
 <h5>sort tags by num posts</h5>
 
+{% assign qqq_tags = "" %}
+{% assign nptags = "" %}
+
+{% for doc in site.docs %}
+  {% assign qqq_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign nptags = nptags | append:qqq_tags %}
+{% endfor %}
 <ul>
 {% capture tags %}
-  {% for tag in testtags %}
+  {% for tag in nptags %}
     <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
        <a href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
     </li>
@@ -106,11 +136,25 @@ tags:
 </ul>
 
 
+
+
+
 <hr>
+
+
+
 
 <h5>tag post count</h5>
 
-{% capture count_tags %}{% for tag in testtags %}
+{% assign rrr_tags = "" %}
+{% assign tpctags = "" %}
+
+{% for doc in site.docs %}
+  {% assign rrr_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign tpctags = tpctags | append:rrr_tags %}
+{% endfor %}
+
+{% capture count_tags %}{% for tag in tpctags %}
   {{ tag | first | downcase }}#{{ tag | first }}
   {% unless forloop.last %},{% endunless %}
   {% endfor %}
@@ -131,11 +175,17 @@ tags:
 
 
 
+
+
 <hr>
+
+
+
+
 
 <h5>tag show</h5>
 
-{% for tag in post.tags %}
+{% for tag in doc.tags %}
   {% assign tag_slug = tag | slugify: "raw" %}
   <a class="tag-link"
     href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }}
@@ -149,10 +199,24 @@ tags:
 
 <hr>
 
+
+
+
+
+
 <h5>another tag cloud</h5>
 
+
+{% assign ddd_tags = "" %}
+{% assign cloudtags = "" %}
+
+{% for doc in site.docs %}
+  {% assign ddd_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign cloudtags = cloudtags | append:ddd_tags %}
+{% endfor %}
+
 <p>
-    {% for tag in testtags %}
+    {% for tag in cloudtags %}
     <!-- Here's a hack to generate a "tag cloud" where the size of
     the word is directly proportional to the number of posts with
     that tag. -->
@@ -162,6 +226,9 @@ tags:
     </a>
     {% endfor %}
 </p>
+
+
+
 
 
 
