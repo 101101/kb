@@ -1,0 +1,24 @@
+
+<h5>Show Tags from doc.tags</h5>
+
+{% assign zzz_tags = "" %}
+{% assign dtags = "" %}
+
+{% for doc in site.docs %}
+  {% assign zzz_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign dtags = dtags | append:zzz_tags %}
+{% endfor %}
+
+<ul>
+  {% assign sorted_tags = dtags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
+    <li>
+      <a href="/tags/# {{ t | downcase | replace:' ','-'}}">
+        {{t | downcase | replace:' ','-' }}
+        <span>({{ posts | size }})</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
