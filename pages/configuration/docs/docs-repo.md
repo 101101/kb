@@ -10,6 +10,9 @@ description: Configuration info for setting up docs to work with prometheus
 
 ## Configuration of Docs Repo  
 
+{% raw %}
+
+
 
 Prometheus and Docs work together through a naming standard.  
   * `Product` affected from Prometheus  
@@ -36,6 +39,8 @@ In order for the links to correctly send you to the right runbook, you need to:
  1. validate the threshold with the affected team  
  1. verify the alert routes correctly when it triggers  
 
+
+{% endraw %}
 
 
 
