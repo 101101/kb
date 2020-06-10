@@ -1,0 +1,54 @@
+---
+title: Test Page
+permalink: /test_1/
+tags:
+  - test
+  - page
+  - code
+  - liquid
+---
+
+<hr>
+
+<h6>Tag List</h6>
+
+
+{% assign xxx_tags = "" %}
+{% assign testtags = "" %}
+
+{% for doc in site.docs %}
+  {% assign xxx_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign testtags = testtags | append:xxx_tags %}
+{% endfor %}
+
+
+{% assign testtags = testtags | split:'|' | sort | uniq %}
+
+{% for tag in testtags %}
+  {% if tag != "" %}
+    {% if tags == "" %}
+      {% assign tags = tag | split:'|' %}
+    {% endif %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+<span>[
+  {% for tag in testtags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <code class="highligher-rouge">{{ tag_name }}</code>&nbsp;</a>
+  {% endfor %}
+]</span>
+
+
+
+
+
+
+<hr>
+
+
+
+<a href="https://dsmith73.github.io"><img src="https://avatars1.githubusercontent.com/u/44279121?s=60&u=7a933a33b51505f9d6435eeffae1c8156a47dc77&v=4" alt="dsmith73.github.io"></a>
