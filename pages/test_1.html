@@ -8,8 +8,8 @@ permalink: /test_1/
 <h3>Tag Tests</h3>
 
 {% assign testtags = "" %}
-{% for tag in page.tags %}
-  {% assign xxx_tags = page.tags | join:'|' | append:'|' %}
+{% for tag in doc.tags %}
+  {% assign xxx_tags = doc.tags | join:'|' | append:'|' %}
   {% assign testtags = testtags | append:xxx_tags %}
 {% endfor %}
 
