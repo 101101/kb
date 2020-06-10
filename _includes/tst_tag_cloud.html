@@ -16,7 +16,7 @@
 
 {% assign sortedtemptags = tctags | split:' ' | sort | reverse %}
 
-{% for tctag in sortedtemptags %}
+{% for tctags in sortedtemptags %}
     {% assign tagitems = tctags | split: '#' %}
     {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
     <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-info">{{ tagname }}</button></a> &nbsp;
