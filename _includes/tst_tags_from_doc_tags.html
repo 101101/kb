@@ -1,21 +1,17 @@
 
 <h5>sort by popularity</h5>
-https://gist.github.com/sskylar/8956549d1ae9dc91c89e74b1c5a0d8c9
+http://matthewfieger.com/posts/me/2014/02/11/jekyll-tag-cloud.html
 <br>
 
-{% assign vvv_tags = '' | split: ',' %}
 
-{% capture tags %}
- {% for doc in site.docs %}
-    {% for tags in doc.tags %}
-        {% for tag in tags %}
-          <ul data-sort="{{ site.docs.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
-             <a href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
-          </ul>
-        {% endfor %}
+{% for doc in site.docs %}
+  {% for tags in doc.tags %}
+    {% for tag in tags %}
+      <span style="font-size: {{ tag | last | size | times: 1000 | divided_by: site.tags.size | plus: 100 }}%">
+      {{ tag | first | replace: ' ', '-'}}
+      </span>
     {% endfor %}
+  {% endfor %}
 {% endfor %}
-{% endcapture %}
 
-{{ tags }}
 
