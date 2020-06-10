@@ -12,6 +12,9 @@ tags:
 
 <h3>Tag Tests</h3>
 
+<h6>Tag List</h6>
+
+
 {% assign xxx_tags = "" %}
 {% assign testtags = "" %}
 
@@ -34,8 +37,16 @@ tags:
   {% endif %}
 {% endfor %}
 
+<span>[
+  {% for tag in testtags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <code class="highligher-rouge">{{ tag_name }}</code>&nbsp;</a>
+  {% endfor %}
+]</span>
+
 
 <hr>
+
 
 <h5>possible tag cloud here</h5>
 
@@ -54,24 +65,41 @@ tags:
 {% endfor %}
 
 
+
+
+
 <hr>
 
 
-<span>[
-  {% for tag in testtags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-    <code class="highligher-rouge">{{ tag_name }}</code>&nbsp;</a>
+
+<h2>Show Tags from site.tags</h2>
+<ul>
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
+    <li>
+      <a href="/tags/# {{ t | downcase | replace:' ','-'}}">
+        {{t | downcase | replace:' ','-' }}
+        <span>({{ posts | size }})</span>
+      </a>
+    </li>
   {% endfor %}
-]</span>
+</ul>
+
+
+
+<hr>
+
+
+<h5>tag test placeholder</h5>
+
+
 
 
 <hr>
 
-<h5>tag cloud here</h5>
 
-{% include tag_cloud.html %}
-
-<hr>
 
 <a href="https://dsmith73.github.io"><img src="https://avatars1.githubusercontent.com/u/44279121?s=60&u=7a933a33b51505f9d6435eeffae1c8156a47dc77&v=4" alt="dsmith73.github.io"></a>
 
