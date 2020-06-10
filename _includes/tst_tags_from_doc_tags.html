@@ -6,7 +6,7 @@ http://matthewfieger.com/posts/me/2014/02/11/jekyll-tag-cloud.html
 {% assign my_tags = "" %}
 {% assign dantags = "" %}
 {% for doc in site.docs %}
-  {% assign my_tags = doc.tags | join:'|' %}
+  {% assign my_tags = doc.tags | join:'|' | append:'|' %}
   {% assign dantags = dantags | append:my_tags %}
 {% endfor %}
 
