@@ -5,22 +5,17 @@ https://gist.github.com/sskylar/8956549d1ae9dc91c89e74b1c5a0d8c9
 
 {% assign vvv_tags = '' | split: ',' %}
 
+{% capture tags %}
  {% for doc in site.docs %}
     {% for tags in doc.tags %}
         {% for tag in tags %}
-            {% assign vvv_tags = vvv_tags | push: tag %}
+          <ul data-sort="{{ site.docs.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+             <a href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+          </ul>
         {% endfor %}
     {% endfor %}
 {% endfor %}
-
-<ul>
-{% capture tags %}
-  {% for tag in vvv_tags %}
-    <li data-sort="{{ site.docs.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
-       <a href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
-    </li>
-  {% endfor %}
 {% endcapture %}
-{{ tags | split:'</li>' | sort | join:'</li>' }}
-</ul>
+
+{{ tags | sort }}
 
