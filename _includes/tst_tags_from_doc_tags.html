@@ -18,3 +18,16 @@ https://www.codeofclimber.ru/2015/sorting-site-tags-in-jekyll/
 {% endfor %}
 </ul>
 
+<hr>
+
+<ul class="list-group">
+{% assign sorted_tags_by_posts_count = site.tags | sort_tags_by_posts_count %}
+{% for tag in sorted_tags_by_posts_count %}
+  <li class="list-group-item">
+    <a href="/tags/{{ tag[0] | prepend: site.baseurl }}">
+      {{ tag[0] }}
+      <span class="badge pull-right">{{ tag[1] }}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>
