@@ -33,10 +33,11 @@ permalink: /test_1/
 <hr>
 
 <h5>possible tag cloud here</h5>
-
-{% for tag in testtags %}
-    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
-{% endfor %}
+{% capture temptags %}
+  {% for tag in testtags %}
+      {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+  {% endfor %}
+{% endcapture %}
 
 {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
 
