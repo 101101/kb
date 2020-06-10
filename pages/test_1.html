@@ -29,6 +29,29 @@ permalink: /test_1/
   {% endif %}
 {% endfor %}
 
+
+<hr>
+
+<h5>possible tag cloud here</h5>
+
+{% for tag in testtags %}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+{% endfor %}
+
+{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+
+{% for temptag in sortedtemptags %}
+    {% assign tagitems = temptag | split: '#' %}
+    {% capture tagname %}
+        {{ tagitems[1] }}
+    {% endcapture %}
+    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><code class="highligher-rouge">{{ tag }}</code>&nbsp;</a>
+{% endfor %}
+
+
+<hr>
+
+
 <span>[
   {% for tag in testtags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
@@ -36,7 +59,10 @@ permalink: /test_1/
   {% endfor %}
 ]</span>
 
+
 <hr>
+
+<h5>tag cloud here</h5>
 
 {% include tag_cloud.html %}
 
