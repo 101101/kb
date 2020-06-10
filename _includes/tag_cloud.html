@@ -1,19 +1,26 @@
-<h3>Tag Cloud</h3>
-{% comment %}   https://longqian.me/2017/02/09/github-jekyll-tag/   {% endcomment %}
 
-{% capture temptags %}
-    {% for tag in page.tags %}
-        {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+<h5>Tag Cloud</h5>
+<!-- 
+I modified the code at this location to work with my structure (docs vs site)  
+https://www.stefan.lu/blog/tag-cloud-in-jekyll-no-plugins/  
+-->  
+
+{% assign all_tags = '' | split: ',' %}
+
+ {% for doc in site.docs %}
+    {% for tags in doc.tags %}
+        {% for tag in tags %}
+            {% assign all_tags = all_tags | push: tag %}
+        {% endfor %}
     {% endfor %}
-{% endcapture %}
-
-{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
-
-{% for temptag in sortedtemptags %}
-    {% assign tagitems = temptag | split: '#' %}
-    {% capture tagname %}
-        {{ tagitems[1] }}
-    {% endcapture %}
-    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tagname }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tagname }} {% endif %}"><code class="highligher-rouge">{{ tagname }}</code></a>
 {% endfor %}
 
+{% assign all_tags = all_tags | sort %}
+{% assign all_tags = all_tags | uniq %}
+
+<div class="tag-list">
+    {% for tag in all_tags %}
+        <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><badge class="badge badge-info">{{ tag }}</badge></a> 
+    {% endfor %}
+
+</div>
