@@ -24,7 +24,7 @@ tags:
 {% endfor %}
 
 
-{% assign testtags = testtags | split:'|' | uniq | sort %}
+{% assign testtags = testtags | split:'|' | sort | uniq %}
 
 {% for tag in testtags %}
   {% if tag != "" %}
