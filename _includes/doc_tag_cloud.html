@@ -1,0 +1,9 @@
+
+{% if page.tags != empty %}
+      <p>Read more:</p>
+      <div class="local-tag-list">
+        {% for tag in page.tags %}
+        <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-success">{{ tag }}</button></a> 
+        {% endfor %}
+      </div>
+{% endif %}
