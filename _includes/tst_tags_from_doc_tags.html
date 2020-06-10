@@ -1,6 +1,7 @@
 
 <h5>tag cloud</h5>
 https://superdevresources.com/tag-cloud-jekyll/
+<br>
 
 <script>
   .site-tag a {
@@ -9,8 +10,19 @@ https://superdevresources.com/tag-cloud-jekyll/
   }
 </script>
 
-{% assign tags = site.tags | sort %}
-{% for tag in tags %}
+{% assign vvv_tags = '' | split: ',' %}
+
+ {% for doc in site.docs %}
+    {% for tags in doc.tags %}
+        {% for tag in tags %}
+            {% assign vvv_tags = vvv_tags | push: tag %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
+
+{% assign vvv_tags = vvv_tags | sort %}
+
+{% for tag in vvv_tags %}
  <span class="site-tag">
     <a href="/tag/{{ tag | first | slugify }}/"
         style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
