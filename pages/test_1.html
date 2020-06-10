@@ -24,6 +24,88 @@ tags:
 
 
 
+
+<hr>
+
+
+
+
+
+
+<h5>possible tag cloud here</h5>
+
+{% assign yyy_tags = "" %}
+{% assign tctags = "" %}
+
+{% for doc in site.docs %}
+  {% assign yyy_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign tctags = tctags | append:yyy_tags %}
+{% endfor %}
+
+{% for tag in tctags %}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+{% endfor %}
+
+{% assign sortedtemptags = tctags | split:' ' | sort | reverse %}
+
+{% for temptag in sortedtemptags %}
+    {% assign tagitems = tctags | split: '#' %}
+    {% capture tagname %}
+        {{ tagitems[1] }}
+    {% endcapture %}
+    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><code class="highligher-rouge">{{ tag }}</code>&nbsp;</a>
+{% endfor %}
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+<h5>Show Tags from doc.tags</h5>
+
+{% assign zzz_tags = "" %}
+{% assign dtags = "" %}
+
+{% for doc in site.docs %}
+  {% assign zzz_tags = doc.tags | join:'|' | append:'|' %}
+  {% assign dtags = dtags | append:zzz_tags %}
+{% endfor %}
+
+<ul>
+  {% assign sorted_tags = dtags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
+    <li>
+      <a href="/tags/# {{ t | downcase | replace:' ','-'}}">
+        {{t | downcase | replace:' ','-' }}
+        <span>({{ posts | size }})</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
 <h5>sort tags by num posts</h5>
 
 {% assign qqq_tags = "" %}
