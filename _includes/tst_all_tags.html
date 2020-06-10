@@ -27,7 +27,7 @@
 <span>[
   {% for tag in testtags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-success">{{ tag_name }}</button></a> &nbsp;
+    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><badge class="badge badge-info">{{ tag_name }}</badge></a> &nbsp;
   {% endfor %}
 ]</span>
 
