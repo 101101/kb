@@ -1,6 +1,10 @@
 ---
 title: NOC Tag Page
 permalink: /noc_tag_page/
+tags:
+  - noc
+category:
+  - noc
 ---
 
 {% capture site_tags %}
@@ -24,7 +28,7 @@ permalink: /noc_tag_page/
 
 {% for tag in tags_list %}
   {% if tag contains "noc" %}
-    <h3 id="{{ tag | replace: '/', '-' }}" class="linked-section">{% highlight .err %}{{ tag | upcase }}{% endhighlight %}</h3>
+    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-success">{{ tag | upcase }}</button></a>
     <div class="post-list" style="margin-bottom:40px">
     {% for doc in site.docs %}
       {% if doc.tags contains tag %}
