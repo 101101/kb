@@ -39,7 +39,7 @@ tags:
 
 <h5>possible tag cloud here</h5>
 {% capture temptags %}
-  {% for tag in testtags %}
+  {% for tag in doc.tags %}
       {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
   {% endfor %}
 {% endcapture %}
