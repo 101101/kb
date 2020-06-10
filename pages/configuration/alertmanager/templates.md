@@ -10,6 +10,8 @@ description: templates.tmpl configuration
 
 ## templates.tmpl configuration  
 
+{% raw %}
+
 .
 .
 .
@@ -99,7 +101,7 @@ description: templates.tmpl configuration
 .
 .
 
-
+{% endraw %}
 
 ---
 
