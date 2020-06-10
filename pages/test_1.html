@@ -7,11 +7,14 @@ permalink: /test_1/
 
 <h3>Tag Tests</h3>
 
+{% assign xxx_tags = "" %}
 {% assign testtags = "" %}
-{% for tag in doc.tags %}
+
+{% for doc in site.docs %}
   {% assign xxx_tags = doc.tags | join:'|' | append:'|' %}
   {% assign testtags = testtags | append:xxx_tags %}
 {% endfor %}
+
 
 {% assign testtags = testtags | split:'|' | sort %}
 
