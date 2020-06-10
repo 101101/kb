@@ -4,8 +4,8 @@ https://www.stefan.lu/blog/tag-cloud-in-jekyll-no-plugins/
 
 {% assign all_tags = '' | split: ',' %}
 
- {% for post in site.posts %}
-    {% for tags in post.tags %}
+ {% for doc in site.docs %}
+    {% for tags in doc.tags %}
         {% for tag in tags %}
             {% assign all_tags = all_tags | push: tag %}
         {% endfor %}
@@ -15,9 +15,9 @@ https://www.stefan.lu/blog/tag-cloud-in-jekyll-no-plugins/
 {% assign all_tags = all_tags | sort %}
 {% assign all_tags = all_tags | uniq %}
 
-<ul class="tag-list">
+<div class="tag-list">
     {% for tag in all_tags %}
-        <li><a href="{{ site.tag_dir | prepend: '/' }}/{{ tag | uri_escape }}">{{ tag }}</a></li>
+        <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><badge class="badge badge-info">{{ tag }}</badge></a> 
     {% endfor %}
 
-</ul>
+</div>
