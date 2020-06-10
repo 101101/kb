@@ -3,13 +3,6 @@
 https://superdevresources.com/tag-cloud-jekyll/
 <br>
 
-<script>
-  .site-tag a {
-    display: inline-block;
-    margin-right: 12px;
-  }
-</script>
-
 {% assign vvv_tags = '' | split: ',' %}
 
  {% for doc in site.docs %}
@@ -20,13 +13,14 @@ https://superdevresources.com/tag-cloud-jekyll/
     {% endfor %}
 {% endfor %}
 
-{% assign vvv_tags = vvv_tags | sort %}
+<ul>
+{% capture tags %}
+  {% for tag in vvv_tags %}
+    <li data-sort="{{ site.docs.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+       <a href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+    </li>
+  {% endfor %}
+{% endcapture %}
+{{ tags | split:'</li>' | sort | join:'</li>' }}
+</ul>
 
-{% for tag in vvv_tags %}
- <span class="site-tag">
-    <a href="/tag/{{ tag | first | slugify }}/"
-        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
-            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
-    </a>
-</span>
-{% endfor %}
