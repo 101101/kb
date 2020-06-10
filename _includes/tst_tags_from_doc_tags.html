@@ -6,8 +6,8 @@ http://matthewfieger.com/posts/me/2014/02/11/jekyll-tag-cloud.html
 {% assign my_tags = "" %}
 {% assign dantags = "" %}
 {% for doc in site.docs %}
-  {% assign my_tags = doc.tags | join:'|' | append:'|' %}
-  {% assign dantags = dantags | append:my_tags %}
+  {% assign my_tags = doc.tags | join:'|' %}
+  {% assign dantags = dantags | append:my_tags | sort %}
 {% endfor %}
 
 <p>dantags: {{ dantags }}</p>
@@ -18,6 +18,8 @@ http://matthewfieger.com/posts/me/2014/02/11/jekyll-tag-cloud.html
 <hr>
 
 {% assign dantags = dantags | split:'|' | sort %}
+
+<p>dantags: {{ dantags }}</p>
 
   {% for tag in dantags %}
     <span style="font-size: {{ tag | last | size | times: 1000 | divided_by: site.tags.size | plus: 100 }}%">
