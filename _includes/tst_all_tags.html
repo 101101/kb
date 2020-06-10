@@ -27,7 +27,7 @@
 <span>[
   {% for tag in testtags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
-    <code class="highligher-rouge">{{ tag_name }}</code>&nbsp;</a>
+    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-success">{{ tag_name }}</button></a> &nbsp;
   {% endfor %}
 ]</span>
 
