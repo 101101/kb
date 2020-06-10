@@ -1,14 +1,20 @@
 
-<h5>by weight</h5>
+<h5>tag cloud</h5>
+https://superdevresources.com/tag-cloud-jekyll/
 
-  <ul>
-    {% for weight in (1..5) %}
-      {% unless p.weight %}
-        {% for p in site.pages %}
-          {% if p.weight == weight %}
-            <li><a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}" title="{{ p.title }}">{{ p.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      {% endunless %}
-    {% endfor %}
-  </ul>
+<script>
+  .site-tag a {
+    display: inline-block;
+    margin-right: 12px;
+  }
+</script>
+
+{% assign tags = site.docs.tags | sort %}
+{% for tag in tags %}
+ <span class="site-tag">
+    <a href="/tag/{{ tag | first | slugify }}/"
+        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+    </a>
+</span>
+{% endfor %}
