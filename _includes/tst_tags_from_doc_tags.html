@@ -10,6 +10,13 @@ http://matthewfieger.com/posts/me/2014/02/11/jekyll-tag-cloud.html
   {% assign dantags = dantags | append:my_tags %}
 {% endfor %}
 
+<p>dantags: {{ dantags }}</p>
+
+<p>my_tags: {{ my_tags }}</p>
+
+
+<hr>
+
 {% assign dantags = dantags | split:'|' | sort %}
 
   {% for tag in dantags %}
