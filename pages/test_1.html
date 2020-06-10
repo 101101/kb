@@ -12,45 +12,6 @@ tags:
 
 <h3>Tag Tests</h3>
 
-<h6>Tag List</h6>
-
-
-{% assign xxx_tags = "" %}
-{% assign testtags = "" %}
-
-{% for doc in site.docs %}
-  {% assign xxx_tags = doc.tags | join:'|' | append:'|' %}
-  {% assign testtags = testtags | append:xxx_tags %}
-{% endfor %}
-
-
-{% assign testtags = testtags | split:'|' | sort | uniq %}
-
-{% for tag in testtags %}
-  {% if tag != "" %}
-    {% if tags == "" %}
-      {% assign tags = tag | split:'|' %}
-    {% endif %}
-    {% unless tags contains tag %}
-      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
-    {% endunless %}
-  {% endif %}
-{% endfor %}
-
-<span>[
-  {% for tag in testtags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-    <code class="highligher-rouge">{{ tag_name }}</code>&nbsp;</a>
-  {% endfor %}
-]</span>
-
-
-
-
-
-
-<hr>
-
 
 
 
