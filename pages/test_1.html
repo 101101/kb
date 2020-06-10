@@ -1,0 +1,75 @@
+---
+title: Test Page
+permalink: /test_1/
+---
+<h3>Tag Cloud</h3>
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+  {% assign ttags = post.tags | join:'|' | append:'|' %}
+  {% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign site.tags = "" %}
+{% for tag in rawtags %}
+  {% if tag != "" %}
+    {% if tags == "" %}
+      {% assign tags = tag | split:'|' %}
+    {% endif %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+<hr>
+
+<h3>Tag Tests</h3>
+
+{% assign testtags = "" %}
+{% for tag in site.tags %}
+  {% assign site_tags = site.tags | join:'|' | append:'|' %}
+  {% for tag in site.pages %}
+    {% assign page_tags = page.tags | join:'|' | append:'|' %}
+    {% for tag in site.docs %}
+      {% assign doc_tags = doc.tags | join:'|' | append:'|' %}
+      {% for tag in site.posts %}
+        {% assign post_tags = post.tags | join:'|' | append:'|' %}
+        {% endfor %}
+    {% endfor %}
+  {% endfor %}
+  {% assign testtags = testtags | append:site_tags | append:page_tags | append:doc_tags | append:post_tags %}
+{% endfor %}
+
+{% assign testtags = testtags | split:'|' | sort %}
+
+{% for tag in testtags %}
+  {% if tag != "" %}
+    {% if tags == "" %}
+      {% assign tags = tag | split:'|' %}
+    {% endif %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+<span>[
+  {% for tag in testtags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <code class="highligher-rouge">{{ tag_name }}</code>&nbsp;</a>
+  {% endfor %}
+]</span>
+
+
+
+
+<hr>
+
+{% include tag_cloud.html %}
+
+<hr>
+
+<a href="https://dsmith73.github.io"><img src="https://avatars1.githubusercontent.com/u/44279121?s=60&u=7a933a33b51505f9d6435eeffae1c8156a47dc77&v=4" alt="dsmith73.github.io"></a>
+
