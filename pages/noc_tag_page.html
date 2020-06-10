@@ -29,6 +29,8 @@ category:
 {% for tag in tags_list %}
   {% if tag contains "noc" %}
     <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-success">{{ tag | upcase }}</button></a>
+    <hr>
+    <br>
     <div class="post-list" style="margin-bottom:40px">
     {% for doc in site.docs %}
       {% if doc.tags contains tag %}
