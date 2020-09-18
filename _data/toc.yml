@@ -6,6 +6,8 @@
   url: infra
 - title: Product-X
   url: product-x
+- title: Recipe
+  url: recipe
 - title: Extras
   url: docs/extras
   links:
