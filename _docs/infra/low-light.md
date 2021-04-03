@@ -15,7 +15,7 @@ description: What do do when a low-light alert is received
 
 ---
 
-[![](https://101101.github.io/optical-test-points.png #Optical Test Points)  
+[![](https://101101.github.io/kb/assets/img/optical-test-points.png #Optical Test Points)  
 
 **Steps**  
   1. Swap the two fiber jumpers at the switch (or server). One of them should be sending light to the switch. It’s possible that it’s connected to the transmitter instead of the receiver. The connectors on the duplex jumper are usually connected together. If they are connected, you may need to gently remove them from the connector and then swap the connectors  
