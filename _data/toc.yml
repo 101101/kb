@@ -4,6 +4,8 @@
   url: noc
 - title: Infra
   url: infra
+- title: Azure
+  url: azure
 - title: Product-X
   url: product-x
 - title: Recipe
