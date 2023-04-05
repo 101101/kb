@@ -76,7 +76,15 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-      
+
+  - scope:
+      path: "_docs/azure"
+      type: "azure"
+    values:
+      layout: "page"
+      category: "azure"
+      tags: "azure"
+
   - scope:
       path: "_docs/noc"
       type: "noc"
