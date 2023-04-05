@@ -25,7 +25,7 @@ _Creating an account in Azure AD_
     * Last name: `last_name`
     * Job title: Title in the HR ticket
     * Department: Department listed in HR ticket
-    * Company name: Company listed in HR ticket (if not a ThriveDX employee)
+    * Company name: Company listed in HR ticket (if not an employee)
   * Click **Let me create the password**
   * Create a password for this account
   * Record the **password** in the **corresponding ticket**
