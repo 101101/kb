@@ -31,6 +31,9 @@ jobs:
       - NOKOGIRI_USE_SYSTEM_LIBRARIES: true
       - BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "be:af:a9:ff:cd:94:e9:1d:f6:81:b7:40:ed:d4:24:75"
       - checkout
       - restore_cache:
           keys:
