@@ -1,12 +1,11 @@
 ---
-title: Azure AD: Create Account
+title: Azure AD - Create Account
 permalink: /docs/azure/create-account/
 tags: 
  - azure
  - account
  - create
-category:
- - azure
+category: azure
 description: Creating an account in Azure AD  
 ---
 
@@ -36,9 +35,9 @@ _Creating an account in Azure AD_
   * Open the account for the user that you just created
   * Click **Edit properties**
   * Verify / update the following fields - 
-    * User type: Member [if internal employee (Guest for Instructor)]
+    * User type: Member (if internal employee) (Guest if Instructor)
     * Employee ID: employee ID on the HR ticket (if included)
-    * Employee type: Employee [for internal employees, Contractor for Contractors, and Vendor for Vendor employees)] 
+    * Employee type: Employee (if internal employees, Contractor for Contractors, and Vendor for Vendor employees) 
     * Employee hire date: if included on the HR ticket
     * City: if known
     * State or province: if known
