@@ -26,7 +26,7 @@ description: Bacon wrapped BBQ appetizer
 1 lb 90\10 ground beef  
 1 lb sweet Italian sausage links (5-6 sausages)  
 8 oz, farm cut shredded cheese  
-Meat Church Honey Hog  
+Your favorite BBQ rub  
 1, C Sweet BBQ Sauce. We use Meat Mitch Naked.  
 
 #### Optional ingredients:  
