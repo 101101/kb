@@ -19,6 +19,8 @@ _Creating an account in Azure AD_
   * Click **+New User** then **Create new user**
   * Fill in the following fields - 
     * User name: `first_name.lastname`
+      * Contractor: `c-first_name.last_name`  
+      * Vendor: `v-first_name.last_name`  
     * Validate the domain is `@companyname.com`
     * Name: `first_name last_name`
     * First name: `first_name`
@@ -42,7 +44,7 @@ _Creating an account in Azure AD_
     * City: if known
     * State or province: if known
     * Mobile phone: if known
-    * Email: the email address that you created above `first_name.last_name@thrivedx.com`
+    * Email: the email address that you created above `first_name.last_name@companyname.com`
     * Mail nickname: `first_name.last_name`
     * Account enabled: **Yes** 
   * Click **Save**
