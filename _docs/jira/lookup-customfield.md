@@ -14,7 +14,7 @@ _Looking up a customfield number from name in Jira Cloud_
 
 ## Steps:  
   - **Open** **Jira**  
-  - **Click** the :gear: (**gear**) in the upper right corner  
+  - **Click** the ⚙️ (**gear**) in the upper right corner  
   - **Click** **Issues**  
   - **Click** **Custom fields** in the left nav bar  
   - **Type** the **name** of the field into the search bar  
