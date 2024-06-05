@@ -6,6 +6,8 @@
   url: infra
 - title: Azure
   url: azure
+- title: Jira Cloud
+  url: jira
 - title: Product-X
   url: product-x
 - title: Recipe
