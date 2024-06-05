@@ -1,0 +1,53 @@
+---
+title: Jira Tag Page
+permalink: /jira_tag_page/
+tags:
+  - jira
+category:
+  - jira
+---
+
+{% capture site_tags %}
+  {% for tag in site.tags %}
+    {% if tag %}{{ tag | first }}
+      {% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+
+{% assign docs_tags = "" %}
+
+{% for doc in site.docs %}
+  {% assign ttags = doc.tags | join:',' | append:',' %}
+  {% assign docs_tags = docs_tags | append:ttags %}
+{% endfor %}
+
+{% assign all_tags = site_tags | append:docs_tags %}
+
+{% assign tags_list = all_tags | split:',' | uniq | sort %}
+
+{% for tag in tags_list %}
+  {% if tag contains "noc" %}
+    <a href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.url }}{{ site.baseurl }}/tags#{{ tag }} {% endif %}"><button class="btn btn-success">{{ tag | upcase }}</button></a>
+    <hr>
+    <br>
+    <div class="post-list" style="margin-bottom:40px">
+    {% for doc in site.docs %}
+      {% if doc.tags contains tag %}
+        <div class="tag-entry">
+          <h5><b><a href="{{- site.baseurl -}}{{- doc.url -}}">{{ doc.title }}</a></b></h5>
+          <i>{{ doc.description }}</i>
+          <time style="font-style:italic; float:right" datetime="{{- doc.date | date_to_xmlschema -}}"> 
+          {{- doc.date | date: "%B %d, %Y" -}}</time>
+          <br>
+          <br>
+          <br>
+        </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  {% endif %}
+{%- endfor -%}
+
+<hr>
+
