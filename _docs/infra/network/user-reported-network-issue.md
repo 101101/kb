@@ -1,6 +1,6 @@
 ---
 title: user-reported-network-issue
-permalink: /docs/infra/network/user-reported-network-issue
+permalink: /docs/infra/network/user-reported-network-issue/
 tags: 
  - network
  - connectivity
