@@ -1,11 +1,12 @@
 ---
 title: low-light
-permalink: /docs/infra/low-light/
+permalink: /docs/infra/network/low-light/
 tags: 
  - infra
  - low-light
  - network
-category: infra
+category:
+ - network
 description: What do do when a low-light alert is received  
 ---
 
