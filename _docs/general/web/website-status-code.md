@@ -16,23 +16,8 @@ description: Process for website-status-code
 general information on status codes can be found here: [httpstatuses](https://httpstatuses.com)  
 
 ---
-```mermaid
-graph TD
-	C{Status Code Received}
 
-  C -->|<=199 or >=400| D{Services UP?}
-	C -->|0| F[Validate Query Method]
-  F -->F1{Website & Query Same?}
-  D -->|NO| D1[Start Services]
-
-  D1 --> D2{Resolved?}
-  D2 -->|YES| D3[Research Issue]
-  D2 -->|NO| D4[Contact Infra for assistance]
-  D -->|YES| D5[Contact Product team for assistance]
-  
-  F1 -->|NO| F2[Fix query]
-  F1 -->|YES| F3[Contact Product team]
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblx0Q3tTdGF0dXMgQ29kZSBSZWNlaXZlZH1cblxuICBDIC0tPnw8PTE5OSBvciA-PTQwMHwgRHtTZXJ2aWNlcyBVUD99XG5cdEMgLS0-fDB8IEZbVmFsaWRhdGUgUXVlcnkgTWV0aG9kXVxuICBGIC0tPkYxe1dlYnNpdGUgJiBRdWVyeSBTYW1lP31cbiAgRCAtLT58Tk98IEQxW1N0YXJ0IFNlcnZpY2VzXVxuXG4gIEQxIC0tPiBEMntSZXNvbHZlZD99XG4gIEQyIC0tPnxZRVN8IEQzW1Jlc2VhcmNoIElzc3VlXVxuICBEMiAtLT58Tk98IEQ0W0NvbnRhY3QgSW5mcmEgZm9yIGFzc2lzdGFuY2VdXG4gIEQgLS0-fFlFU3wgRDVbQ29udGFjdCBQcm9kdWN0IHRlYW0gZm9yIGFzc2lzdGFuY2VdXG4gIFxuICBGMSAtLT58Tk98IEYyW0ZpeCBxdWVyeV1cbiAgRjEgLS0-fFlFU3wgRjNbQ29udGFjdCBQcm9kdWN0IHRlYW1dXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoibmV1dHJhbCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblx0Q3tTdGF0dXMgQ29kZSBSZWNlaXZlZH1cblxuICBDIC0tPnw8PTE5OSBvciA-PTQwMHwgRHtTZXJ2aWNlcyBVUD99XG5cdEMgLS0-fDB8IEZbVmFsaWRhdGUgUXVlcnkgTWV0aG9kXVxuICBGIC0tPkYxe1dlYnNpdGUgJiBRdWVyeSBTYW1lP31cbiAgRCAtLT58Tk98IEQxW1N0YXJ0IFNlcnZpY2VzXVxuXG4gIEQxIC0tPiBEMntSZXNvbHZlZD99XG4gIEQyIC0tPnxZRVN8IEQzW1Jlc2VhcmNoIElzc3VlXVxuICBEMiAtLT58Tk98IEQ0W0NvbnRhY3QgSW5mcmEgZm9yIGFzc2lzdGFuY2VdXG4gIEQgLS0-fFlFU3wgRDVbQ29udGFjdCBQcm9kdWN0IHRlYW0gZm9yIGFzc2lzdGFuY2VdXG4gIFxuICBGMSAtLT58Tk98IEYyW0ZpeCBxdWVyeV1cbiAgRjEgLS0-fFlFU3wgRjNbQ29udGFjdCBQcm9kdWN0IHRlYW1dXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoibmV1dHJhbCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)  
 
 ---
 
