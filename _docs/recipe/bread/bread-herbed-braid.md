@@ -69,6 +69,4 @@ description: Herbed Braided Bread
 [Original Recipe](https://longbournfarm.com/60-minute-homemade-herb-bread/ "60 Minute Italian Herbed Bread Recipe")  
 
 ---
-Autofill
 
-;
