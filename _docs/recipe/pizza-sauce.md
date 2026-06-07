@@ -21,7 +21,7 @@ description: pizza-sauce
 
 ### Ingredients:  
 20 oz can of crushed tomatoes  
-2 tsp salt  
+1 1/2 tsp salt  
 2 tsp oregano  
 3 tsp basil  
 1 tsp suger  
