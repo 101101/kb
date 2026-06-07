@@ -34,7 +34,7 @@ description: pizza-sauce
 ### Instructions:  
   1. Mix all ingredients in the can of crushed tomatoes  
 
-  #### Usage -  
+#### Usage -  
   1. Use approximately 1/2 cup of mixed sauce per 16" pizza  
 
 
